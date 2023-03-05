@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="pojo.Ziare" table="ziare" catalog="proiect"
+		optimistic-lock="version">
+		<id name="idziar" type="java.lang.Long">
+			<column name="idziar" />
+			<generator class="identity" />
+		</id>
+		<property name="nume" type="string">
+			<column name="nume" length="45" />
+		</property>
+		<property name="adresa" type="string">
+			<column name="adresa" length="45" />
+		</property>
+		<set name="abonamente" table="abonamente" inverse="true"
+			lazy="true" fetch="select">
+			<key>
+				<column name="idziar" />
+			</key>
+			<one-to-many class="pojo.Abonamente" />
+		</set>
+	</class>
+</hibernate-mapping>

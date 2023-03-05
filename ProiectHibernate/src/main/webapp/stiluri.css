@@ -1,0 +1,33 @@
+body{
+	background-image: url("images/ziar1.jpg");
+	background-repeat: repeat;
+    background-color: #E8BFF5;
+    text-align: center;
+}
+
+table{
+    border: medium solid black;
+    text-align: center;  
+    width: 50%;
+    height: 150px;  
+}
+table:hover {
+    background-color: #FFFEF3;
+}
+a{
+   background-color: #F9F9EC; 
+  border: none;
+  color: black;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+h1{
+    text-align:center;
+}
